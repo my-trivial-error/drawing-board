@@ -1769,13 +1769,7 @@ keyPressed = function() {
 
 render();
 
-// I am honored any time anybody uses my code for any
-// purpose.  Copy freely! All my programs are at
-// https://www.khanacademy.org/profile/BobLyon/programs
-// I can be reached at Robert.B.Lyon@gmail.com
-
-        };
-    }
+    };
 };
 var canvas = document.getElementById("canvas");
 var processingInstance = new Processing(canvas, game1);
