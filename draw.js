@@ -1,14 +1,9 @@
 var game1 = function(processingInstance) {
     with(processingInstance) {
-        size(1000, 500);
-        var x, y;
-        x = mouseX;
-        y = mouseY;
-        var color = function() {
-            fill(0, 0, 0);
-            rect(0, 0, 1000, 500);
-            fill(255, 255, 255);
-            draw(x,y);
+        size(400, 400);
+        frameRate(60);
+        /* This was created by Robert Lyon. It is licensed under creative commons and mit license. */
+        
         };
     }
 };
