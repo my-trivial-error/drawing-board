@@ -1769,7 +1769,7 @@ keyPressed = function() {
 
 render();
 
-    };
+    }
 };
 var canvas = document.getElementById("canvas");
 var processingInstance = new Processing(canvas, game1);
