@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>macOS simulator</title>
+        <link rel="stylesheet" href="one.css">
+        <script src="one.js"></script>
+        <!-- Copyright (c) 2024 Charles Wang, known as omega-beta -->
+    </head>
+    <body>
+        <div class="top" style="z-index: 999;">
+            <button class="logo"><img src="Downloads/apple.png" width=15px height=auto style="filter: invert(1);" /></button>
+            <button class="select"><b>Chrome</b></button>
+            <button class="select">Files</button>
+            <button class="select">Edit</button>
+            <button class="select">View</button>
+            <button class="select">Window</button>
+            <button class="select">Help</button>
+        </div>
+        <div class="torc" style="z-index: 999;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Finder_Icon_macOS_Big_Sur.png" width="6.2%" height=auto class="serve">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/640px-Google_Chrome_icon_%28February_2022%29.svg.png" id="googleIcon" width="6%" height=auto class="serve" />
+            <img src="https://upload.wikimedia.org/wikipedia/en/2/23/System_Preferences_icon.png" width="6.2%" height=auto class="serve" />
+            <img src="https://upload.wikimedia.org/wikipedia/en/7/77/KeynoteIconMac256.png" width="6.2%" height=auto class="serve" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Microsoft_Word_logo_%282013-2019%29.png" width="6.2%" height=auto class="serve" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/800px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png" width="6.2%" height=auto class="serve" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/1200px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png" width="6.2%" height=auto class="serve" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Chess_Icon.png" width="6.5%" height=auto class="serve" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Calendar_%28macOS%29.png" width="6.2%" height=auto class="serve" />
+            <img src="https://upload.wikimedia.org/wikipedia/en/3/3e/TextEdit_icon.png" width="6.5%" height=auto class="serve" id="textEditIcon"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_Notes_icon.svg/2048px-Apple_Notes_icon.svg.png" width="6%" height=auto class="serve" />
+            <img src="https://static.wikia.nocookie.net/ipod/images/3/35/Utility_del_trashcan.png/revision/latest?cb=20200416165524" width="6.5%" height=auto class="serve" />
+        </div>
+        <div id="textedit" class="changedHide" style="z-index: 11">
+            <div class="head1" id="safeguard1">
+                <!-- <style>
+                    .change {
+                        display: none;
+                    }
+                </style> -->
+                <button class="red" id="textedithide">&nbsp;</button>
+                <button class="yellow">&nbsp;</button>
+                <button class="green">&nbsp;</button>
+                <!-- <script>
+                    var chromium = document.getElementById("chromehide");
+                    var chromeIcon = document.getElementById("googleIcon");
+                    function hideChrome() {
+                        var tab = document.getElementById("tab");
+                        tab.classList.toggle("changedHide");
+                        // alert(tab.className);
+                        /* if (tab.className === "changedHide") {
+                            tab.classList.toggle("hide");
+                        } */
+                    }
+                    chromium.addEventListener("mousedown", function(e) {
+                        hideChrome();
+                    });
+                    chromeIcon.addEventListener("mousedown", function(e) {
+                        hideChrome();
+                    });
+                </script> -->
+                <div style="float: right; margin-top: 0px; display: flex; font-family: sans-serif; margin-right: 45%;">
+                    <a>TextEdit</a>
+                </div>
+            </div>
+            <div class="tex">
+                <textarea rows="10"></textarea>
+            </div>
+        </div>
+        <div id="tab" class="changedHide" class="tabWrapper" style="z-index: 10">
+            <div class="head" id="safeguard">
+                <!-- <style>
+                    .change {
+                        display: none;
+                    }
+                </style> -->
+                <button class="red" id="chromehide">&nbsp;</button>
+                <button class="yellow">&nbsp;</button>
+                <button class="green">&nbsp;</button>
+                <div style="float: right; margin-top: 0px; display: flex; font-family: sans-serif; margin-right: 45%;">
+                    <a>Google Chrome</a>
+                </div>
+            </div>
+            <div class="webpage">
+                <!-- <form>
+                    <h2>Enter a URL:</h2>
+                    <input value="https://www.google.com" id="input" autocomplete="off">
+                    <input type="submit" id="submit" value="Search">
+                </form>
+                -->
+                <iframe src="https://www.google.com/search?igu=1" width="100%" height="450" id="webpageUp"></iframe>
+                <!-- https://www.google.com/search?igu=1 -->
+                <!-- <script>
+                    var submission = document.getElementById("submit");
+                    var webpage = document.getElementById("webpageUp");
+                    submission.addEventListener('click', open);
+                    function open() {
+                        var idInput = document.getElementById("input").value;
+                        alert(idInput)
+                        // webpage.setAttribute("src", idInput);
+                        // window.open("https://www.google.com/search?q="+idInput+"&safe=active&ssui=on&surl=1");
+                    }
+                </script> 
+                -->
+            </div>
+        <!-- <script>
+            var openGoogleTab = document.getElementById("google");
+            var googleTab = document.getElementById("tab");
+            function hideTab() {
+                tab.classList.toggle("hide");
+            }
+        </script> -->
+    </body>
+</html>
