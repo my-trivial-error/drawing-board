@@ -227,7 +227,7 @@
                 </style> -->
                 <button class="red" id="chromehide">&nbsp;</button>
                 <button class="yellow">&nbsp;</button>
-                <button class="green">&nbsp;</button>
+                <button class="green" id="greenButtonChrome">&nbsp;</button>
                 <div style="float: right; margin-top: 0px; display: flex; font-family: sans-serif; margin-right: 45%;">
                     <a>Google Chrome</a>
                 </div>
@@ -240,7 +240,7 @@
                 </form>
                 -->
                 <!-- <button onclick="changeTabs()">New Tab</button><button onclick="changeTabs()">New Tab</button> -->
-                <iframe src="https://www.google.com/search?igu=1" width="100%" height="450" id="webpageUp" style="margin: 0;"></iframe>
+                <iframe src="https://www.google.com/search?igu=1" width="100%" height="450px" id="webpageUp" style="margin: 0;"></iframe>
                 <iframe src="https://www.google.com/search?igu=1" width="100%" height="450" id="webpageUp2"></iframe>
                 <!-- https://www.google.com/search?igu=1 -->
                 <!-- <script>
@@ -255,6 +255,14 @@
                     }
                 </script> 
                 -->
+                <script>
+                    var greenButton = document.getElementById("greenButton");
+                    var webpageExtension = document.getElementById("webpageUp");
+                    greenButton.addEventListener("mousedown", function(e) {
+                        webpageExtension.style.width="1000px";
+                        webpageExtension.style.height="700px";
+                    });
+                </script>
             </div>
         </div>
         <div class="changedHide" class="tabWrapper" style="z-index: 10;" id="asdf">
