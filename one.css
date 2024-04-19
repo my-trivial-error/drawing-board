@@ -7,9 +7,18 @@ button {
     left: 0;
     right: 0;
     position: fixed;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
 }
 .select {
+    background: rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 1);
+    border: none;
+    padding: 7px 10px;
+    /* width: 5%; */
+    font-family: sans-serif;
+    font-size: 13pt;
+}
+.whydd {
     background: rgba(0, 0, 0, 0);
     color: rgba(255, 255, 255, 1);
     border: none;
@@ -17,6 +26,7 @@ button {
     /*width: 5%;*/
     font-family: sans-serif;
     font-size: 13pt;
+    margin-top: 0px;
 }
 .select:hover {
     background: rgba(0, 0, 0, 0.4);
@@ -36,7 +46,7 @@ button {
     padding: 5px;
     border-radius: 10px 10px 0px 0px;
     margin: none;
-    width: 400px;
+    width: 410px;
     margin-top: 40px;
 }
 textarea {
@@ -47,6 +57,8 @@ textarea {
     max-width: 410px;
     max-height: 200px;
     background: rgba(255, 255, 255, 1);
+    padding: 5px;
+    border-radius: 0px 0px 7px 7px;
 }
 #textedit {
     position: fixed;
@@ -147,7 +159,7 @@ textarea {
 }
 iframe {
     border: none;
-    margin: 5px;
+    margin: 0px;
 }
 h2 {
     font-family: sans-serif;
@@ -158,7 +170,8 @@ h2 {
 body {
     background: url("https://cdn.wccftech.com/wp-content/uploads/2016/11/Abstract-Shapes.jpg");
     background-size: cover;
-    cursor: url("Downloads/apple.png");
+    user-select: none;
+    /* cursor: progress */;
 }
 .serve {
     margin: 5px;
@@ -169,7 +182,7 @@ body {
     margin-top: 40px;
     /* height: 75%; */
     position: fixed;
-    display: block; 
+    display: block;
 }
 .changedHide {
     visibility: hidden;
@@ -188,4 +201,16 @@ body {
     width: 50%;
     margin-left: 25%;
     border-radius: 15px 15px 0px 0px;
+}
+#webpageUp2 {
+    display: none;
+}
+.grapes {
+    display: none;
+}
+.apples {
+    display: block;
+}
+.tabWrapper {
+    box-shadow: 1px 1px 3px 2px;
 }
