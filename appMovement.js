@@ -129,3 +129,16 @@ function changeTabs() {
 document.addEventListener("dblclick", function(e) {
     nameApp.innerHTML = "Finder";
 });
+var asdfd = document.getElementById("asdfd");
+var eee = document.getElementById("eee");
+function hideSys() {
+    var asdf = document.getElementById("asdf");
+    asdf.classList.toggle("changedHide");
+}
+eee.addEventListener("mousedown", function(e) {
+    hideSys();
+});
+asdfd.addEventListener("mousedown", function(e) {
+    hideSys();
+    nameApp.innerHTML = "System Preferences";
+});

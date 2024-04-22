@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>macOS simulator</title>
-        <link rel="stylesheet" href="one.css">
+        <link rel="stylesheet" href="style.css">
         <!-- Copyright (c) 2024 Charles Wang, known as omega-beta -->
     </head>
     <body>
@@ -20,77 +20,13 @@
             <img class="whydd" src="https://cdn.iconscout.com/icon/free/png-256/free-spotlight-1851016-1569003.png" style="filter: invert(1); float: right; margin-right: 0px; margin-top: 2px;" width=17px>
             <img class="whydd" src="https://icon-library.com/images/mac-wifi-icon/mac-wifi-icon-16.jpg" style="filter: invert(1); float: right; margin-right: 0px; margin-top: 3px;" width=17px>
             <p class="whydd" style="float: right; margin: 0px; margin-right: 0px;" id="battery">&nbsp;</p>
-            <script>
-                var bt = document.getElementById("battery");
-                function batterysadf() {
-                    navigator.getBattery().then (a => {
-                        var battlevel = Math.round(a.level*100);
-                        let t = battlevel + "%";
-                        bt.innerHTML = t;
-                    })
-                    setTimeout(batterysadf,1000);
-                    // updates every one second
-                }
-                batterysadf();
-            </script>
+            <script src="dockHead/battery.js"></script>
             <!-- <style>
                 .whydd:hover {
                     background: rgba(0, 0, 0, 0);
                 }
             </style> -->
-            <script>
-                /* var onefe = getBattery();
-                alert(onefe); */
-                function startT() {
-                    const dates = new Date();
-                    var weekday = dates.getDay();
-                    var month = dates.getUTCMonth();
-                    var day = dates.getUTCDate();
-                    let hour = dates.getHours();
-                    var apm;
-                    if ((hour-12) >= 0) {
-                        apm = "PM";
-                    } else {
-                        apm = "AM";
-                    }
-                    if (hour == 12) {hour = 12} else {hour = hour % 12;}
-                    let minutes = dates.getMinutes();
-                    function addZero(i) {
-                        if (i < 10) {
-                            i = "0"+i;
-                            return i;
-                        } else {
-                            return i;
-                        }
-                    }
-                    minutes = addZero(minutes);
-                    hour = addZero(hour);
-                    var des = document.getElementById("hdifj");
-                    if (month == 0) {month="Jan"};
-                    if (month == 1) {month="Feb"};
-                    if (month == 2) {month="Mar"};
-                    if (month == 3) {month="Apr"};
-                    if (month == 4) {month="May"};
-                    if (month == 5) {month="Jun"};
-                    if (month == 6) {month="Jul"};
-                    if (month == 7) {month="Aug"};
-                    if (month == 8) {month="Sep"};
-                    if (month == 9) {month="Oct"};
-                    if (month == 10) {month="Nov"};
-                    if (month == 11) {month="Dec"};
-                    if (weekday == 0) {weekday="Sun"};
-                        if (weekday == 1) {weekday="Mon"};
-                    if (weekday == 2) {weekday="Tue"};
-                    if (weekday == 3) {weekday="Wed"};
-                    if (weekday == 4) {weekday="Thu"};
-                    if (weekday == 5) {weekday="Fri"};
-                    if (weekday == 6) {weekday="Sat"};
-                    if (weekday == 7) {weekday="Sun"};
-                    des.innerHTML = weekday+" "+month+" "+day+"&emsp;"+hour+":"+minutes+" "+apm;
-                    setTimeout(startT, 1000);
-                }
-                startT();
-            </script>
+            <script src="dockHead/time.js"></script>
         </div>
         <div class="torc" style="z-index: 999;">
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Finder_Icon_macOS_Big_Sur.png" width="6.2%" height=auto class="serve" id="finder" draggable="false" />
@@ -140,82 +76,8 @@
             </div>
             <div class="tex">
                 <button>Save</button><!-- &nbsp;Font Size:&nbsp;<input type="range" id="textSize" name="font-size" min="1" max="70" value="12" step="1" />-->&emsp;Text Colors:&nbsp;<button class="colorBlack" onclick="changeColorBlack()">&nbsp;</button><button class="colorBlue" onclick="changeColorBlue()">&nbsp;</button><button class="colorRed" onclick="changeColorRed()">&nbsp;</button><button class="colorYellow" onclick="changeColorYellow()">&nbsp;</button><button class="colorGreen" onclick="changeColorGreen()">&nbsp;</button>
-                <script>
-                    function changeColorBlue() {
-                        var tesxt = document.getElementById("tesxt");
-                        tesxt.classList.add("blueColor");
-                        tesxt.classList.remove("redColor");
-                        tesxt.classList.remove("blackColor");
-                        tesxt.classList.remove("greenColor");
-                        tesxt.classList.remove("yellowColor");
-                    }
-                    function changeColorRed() {
-                        tesxt.classList.add("redColor");
-                        tesxt.classList.remove("blueColor");
-                        tesxt.classList.remove("blackColor");
-                        tesxt.classList.remove("greenColor");
-                        tesxt.classList.remove("yellowColor");
-                    }
-                    function changeColorBlack() {
-                        tesxt.classList.add("blackColor");
-                        tesxt.classList.remove("blueColor");
-                        tesxt.classList.remove("redColor");
-                        tesxt.classList.remove("greenColor");
-                        tesxt.classList.remove("yellowColor");
-                    }
-                    function changeColorGreen() {
-                        tesxt.classList.add("greenColor");
-                        tesxt.classList.remove("blueColor");
-                        tesxt.classList.remove("redColor");
-                        tesxt.classList.remove("blackColor");
-                        tesxt.classList.remove("yellowColor");
-                    }
-                    function changeColorYellow() {
-                        tesxt.classList.add("yellowColor");
-                        tesxt.classList.remove("blueColor");
-                        tesxt.classList.remove("redColor");
-                        tesxt.classList.remove("blackColor");
-                        tesxt.classList.remove("greenColor");
-                    }
-                    var ef = document.getElementById("textSize").value;
-                    tesxt.style.fontSize = ef;
-                    document.addEventListener("contextmenu", event => {
-                        event.preventDefault();
-                    });
-                </script>
                 <textarea rows="10" id="tesxt" placeholder="Insert your text here" spellcheck="false"></textarea>
-                <style>
-                    .redColor {
-                        color: red;
-                    }
-                    .blueColor {
-                        color: blue;
-                    }
-                    .blackColor {
-                        color: black;
-                    }
-                    .greenColor {
-                        color: green;
-                    }
-                    .yellowColor {
-                        color: yellow;
-                    }
-                    .colorBlue {
-                        background: blue;
-                    }
-                    .colorRed {
-                        background: red;
-                    }
-                    .colorBlack {
-                        background: black;
-                    }
-                    .colorGreen {
-                        background: green;
-                    }
-                    .colorYellow {
-                        background: yellow;
-                    }
-                </style>
+                <script src="changeColors.js"></script>
             </div>
         </div>
         <div id="tab" class="changedHide" class="tabWrapper" style="z-index: 10;">
@@ -293,21 +155,6 @@
                 <p>Anyways, this is intended to de-sieve the teachers of your school. This works best in fullscreen.</p>
             </div>
         </div>
-        <script>
-            var asdfd = document.getElementById("asdfd");
-            var eee = document.getElementById("eee");
-            function hideSys() {
-                var asdf = document.getElementById("asdf");
-                asdf.classList.toggle("changedHide");
-            }
-            eee.addEventListener("mousedown", function(e) {
-                hideSys();
-            });
-            asdfd.addEventListener("mousedown", function(e) {
-                hideSys();
-                nameApp.innerHTML = "System Preferences";
-            });
-        </script>
         <style>
             #asdf {
                 padding-top: 30px;
@@ -315,7 +162,7 @@
                 max-height: 40%;
             }
         </style>
-        <script src="one.js"></script>
+        <script src="appMovement.js"></script>
         <!-- <input type="password"> -->
     </body>
 </html>
