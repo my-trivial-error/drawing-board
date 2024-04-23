@@ -16,6 +16,7 @@ function hideTextedit() {
 texteditium.addEventListener("mousedown", function(e) {
     hideTextedit();
 });
+// for TextEdit
 teIcon.addEventListener("mousedown", function(e) {
     hideTextedit();
     nameApp.innerHTML = "TextEdit";
