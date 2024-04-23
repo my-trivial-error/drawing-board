@@ -96,13 +96,13 @@
                 </div>
             </div>
             <div class="webpage">
-                <input type="text" id="searchQuery" />
+                <input type="text" id="searchQuery" autocomplete="off" />
                 <script>
                     var url = document.getElementById("searchQuery");
                     var web = document.getElementById("webpageUp");
                     document.addEventListener("keypress", function (event) {
                         // event.preventDefault();
-                        if (event.key === "Enter") {
+                        if (event.keyCode === 13) {
                             web.attribute.src = url.value;
                             // frame.classList.add("one");
                             // frame.attribute.src = URL.value;
