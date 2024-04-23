@@ -96,6 +96,19 @@
                 </div>
             </div>
             <div class="webpage">
+                <input type="text" id="searchQuery" />
+                <script>
+                    var url = document.getElementById("searchQuery");
+                    var web = document.getElementById("webpageUp");
+                    document.addEventListener("keypress", function (event) {
+                        // event.preventDefault();
+                        if (event.key === "Enter") {
+                            web.attribute.src = url.value;
+                            // frame.classList.add("one");
+                            // frame.attribute.src = URL.value;
+                        }
+                    });
+                </script>
                 <!-- <form>
                     <h2>Enter a URL:</h2>
                     <input value="https://www.google.com" id="input" autocomplete="off">
