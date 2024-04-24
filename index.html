@@ -96,7 +96,7 @@
                 </div>
             </div>
             <div class="webpage">
-                <input type="text" id="searchQuery" autocomplete="off" />
+                <input type="text" id="searchQuery" autocomplete="off" placeholder=""/>
                 <!-- <form>
                     <h2>Enter a URL:</h2>
                     <input value="https://www.google.com" id="input" autocomplete="off">
@@ -113,7 +113,7 @@
                         // event.preventDefault();
                         if (event.keyCode === 13) {
                             alert("yay!");
-                            web.attribute.src = url.value;
+                            web.contentWindow.document.location.href = url.value;
                             // frame.classList.add("one");
                             // frame.attribute.src = URL.value;
                         }
