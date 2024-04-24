@@ -97,6 +97,15 @@
             </div>
             <div class="webpage">
                 <input type="text" id="searchQuery" autocomplete="off" />
+                <!-- <form>
+                    <h2>Enter a URL:</h2>
+                    <input value="https://www.google.com" id="input" autocomplete="off">
+                    <input type="submit" id="submit" value="Search">
+                </form>
+                -->
+                <!-- <button onclick="changeTabs()">New Tab</button><button onclick="changeTabs()">New Tab</button> -->
+                <iframe src="https://www.google.com/search?igu=1" width="100%" height="450px" id="webpageUp" style="margin: 0;"></iframe>
+                <iframe src="https://www.google.com/search?igu=1" width="100%" height="450" id="webpageUp2"></iframe>\
                 <script>
                     var url = document.getElementById("searchQuery");
                     var web = document.getElementById("webpageUp");
@@ -110,15 +119,6 @@
                         }
                     });
                 </script>
-                <!-- <form>
-                    <h2>Enter a URL:</h2>
-                    <input value="https://www.google.com" id="input" autocomplete="off">
-                    <input type="submit" id="submit" value="Search">
-                </form>
-                -->
-                <!-- <button onclick="changeTabs()">New Tab</button><button onclick="changeTabs()">New Tab</button> -->
-                <iframe src="https://www.google.com/search?igu=1" width="100%" height="450px" id="webpageUp" style="margin: 0;"></iframe>
-                <iframe src="https://www.google.com/search?igu=1" width="100%" height="450" id="webpageUp2"></iframe>
                 <!-- https://www.google.com/search?igu=1 -->
                 <!-- <script>
                     var submission = document.getElementById("submit");
