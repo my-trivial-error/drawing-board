@@ -96,7 +96,7 @@
                 </div>
             </div>
             <div class="webpage">
-                <input type="text" id="searchQuery" autocomplete="off" placeholder="Search Google or type a URL" style="padding: 10px; border-radius: 15px; width: 90%;" />
+                <input type="text" id="searchQuery" autocomplete="off" placeholder="Search Google or type a URL" style="padding: 7px; border-radius: 15px; width: 90%;" />
                 <!-- <form>
                     <h2>Enter a URL:</h2>
                     <input value="https://www.google.com" id="input" autocomplete="off">
@@ -136,6 +136,7 @@
                     var greenButton = document.getElementById("greenButton");
                     var webpageExtension = document.getElementById("webpageUp");
                     greenButton.addEventListener("mousedown", function(e) {
+                        alert("yay!");
                         webpageExtension.style.width="1000px";
                         webpageExtension.style.height="700px";
                     });
