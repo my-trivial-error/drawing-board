@@ -96,7 +96,7 @@
                 </div>
             </div>
             <div class="webpage">
-                <input type="text" id="searchQuery" autocomplete="off" placeholder="Search Google or type a URL" style="padding: 7px; border-radius: 15px; width: 90%;" />
+                <p>&leftarrow;&nbsp;&rightarrow;</p><input type="text" id="searchQuery" autocomplete="off" placeholder="Search Google or type a URL" style="padding: 7px; border-radius: 15px; width: 80%;" />
                 <!-- <form>
                     <h2>Enter a URL:</h2>
                     <input value="https://www.google.com" id="input" autocomplete="off">
@@ -112,10 +112,12 @@
                     document.addEventListener("keypress", function (event) {
                         // event.preventDefault();
                         if (event.keyCode === 13) {
+                            var x = url.value
+                            if (url.value === "https://google.com") {x = "https://google.com?igu=1"} else {if (url.value === "https://www.google.com") {x = "https://www.google.com?igu=1"}}
                             // alert(url.value);
                             // web.contentWindow.document.location.href = url.value;
                             // frame.classList.add("one");
-                            web.src = url.value;
+                            web.src = x;
                         }
                     });
                 </script>
