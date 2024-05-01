@@ -8,6 +8,61 @@
         <!-- Copyright (c) 2024 Charles Wang, known as omega-beta -->
     </head>
     <body>
+        <div id="login">
+            <div class="backDD">
+                <center>
+                    <p id="p">Charles Wang</p>
+                    <input type="password" id="pass" placeholder="Enter password:" />
+                </center>
+            </div>
+        </div>
+        <style>
+            .backDD {
+                background: rgba(0, 0, 0, 0.5);
+                color: white;
+                width: 60%;
+                margin-left: 20%;
+                height: 40%;
+                margin-top: 10%;
+                padding: 10px;
+                border-radius: 40px;
+            }
+            #p {
+                font-size: 30pt;
+            }
+            #login {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                background: url("https://cdn.wccftech.com/wp-content/uploads/2016/11/Abstract-Shapes.jpg");
+                background-size: cover;
+                z-index: 999;
+                /* padding: 100px; */
+                display: block;
+            }
+        </style>
+        <script>
+            var password, screen, lock;
+            password = document.getElementById("pass");
+            screen = document.getElementById("login");
+            lock = document.getElementById("appleLogo");
+            function lockComplete() {
+                document.addEventListener("keypress", function (event) {
+                    // event.preventDefault();
+                    if (event.keyCode === 13) {
+                        if (password.value === "mac is better") {
+                            // alert("die");
+                            screen.style.display = "none";
+                        } else {
+                            password.value = "null";
+                        }
+                    }
+                });
+            }
+            lockComplete();
+        </script>
         <!-- onload="startT()" -->
         <div class="top" style="z-index: 999;">
             <button class="logo" id="appleLogo" onclick="lockComplete()"><img src="artwork/apple.png" width=15px height=auto style="filter: invert(1);" /></button>
@@ -183,60 +238,5 @@
         </style>
         <script src="appMovement.js"></script>
         <!-- <input type="password"> -->
-        <div id="login">
-            <div class="backDD">
-                <center>
-                    <p id="p">Charles Wang</p>
-                    <input type="password" id="pass" placeholder="Enter password:" />
-                </center>
-            </div>
-        </div>
-        <style>
-            .backDD {
-                background: rgba(0, 0, 0, 0.5);
-                color: white;
-                width: 60%;
-                margin-left: 20%;
-                height: 40%;
-                margin-top: 10%;
-                padding: 10px;
-                border-radius: 40px;
-            }
-            #p {
-                font-size: 30pt;
-            }
-            #login {
-                position: fixed;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                left: 0;
-                background: url("https://cdn.wccftech.com/wp-content/uploads/2016/11/Abstract-Shapes.jpg");
-                background-size: cover;
-                z-index: 999;
-                /* padding: 100px; */
-                display: block;
-            }
-        </style>
-        <script>
-            var password, screen, lock;
-            password = document.getElementById("pass");
-            screen = document.getElementById("login");
-            lock = document.getElementById("appleLogo");
-            function lockComplete() {
-                document.addEventListener("keypress", function (event) {
-                    // event.preventDefault();
-                    if (event.keyCode === 13) {
-                        if (password.value === "mac is better") {
-                            // alert("die");
-                            screen.style.display = "none";
-                        } else {
-                            password.value = "null";
-                        }
-                    }
-                });
-            }
-            lockComplete();
-        </script>
     </body>
 </html>
