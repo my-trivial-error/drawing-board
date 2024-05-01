@@ -207,7 +207,7 @@
             screen = document.getElementById("login");
             document.addEventListener("keypress", function (event) {
                 // event.preventDefault();
-                if (event.keyCode == 13) {
+                if (event.keyCode === "13") {
                     if (password === "hello") {
                         screen.style.display = "none";
                     }
