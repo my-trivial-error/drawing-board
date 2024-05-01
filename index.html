@@ -10,7 +10,7 @@
     <body>
         <!-- onload="startT()" -->
         <div class="top" style="z-index: 999;">
-            <button class="logo"><img src="artwork/apple.png" width=15px height=auto style="filter: invert(1);" /></button>
+            <button class="logo" id="appleLogo" onclick="lockComplete()"><img src="artwork/apple.png" width=15px height=auto style="filter: invert(1);" /></button>
             <button class="select"><b id="nameApp">Finder</b></button>
             <button class="select">Files</button>
             <button class="select">Edit</button>
@@ -219,18 +219,24 @@
             }
         </style>
         <script>
-            var password, screen;
+            var password, screen, lock;
             password = document.getElementById("pass");
             screen = document.getElementById("login");
-            document.addEventListener("keypress", function (event) {
-                // event.preventDefault();
-                if (event.keyCode === 13) {
-                    if (password.value === "hello") {
-                        // alert("die");
-                        screen.style.display = "none";
+            lock = document.getElementById("appleLogo");
+            function lockComplete() {
+                document.addEventListener("keypress", function (event) {
+                    // event.preventDefault();
+                    if (event.keyCode === 13) {
+                        if (password.value === "mac is better") {
+                            // alert("die");
+                            screen.style.display = "none";
+                        } else {
+                            password.value = "null";
+                        }
                     }
-                }
-            });
+                });
+            }
+            lockComplete();
         </script>
     </body>
 </html>
