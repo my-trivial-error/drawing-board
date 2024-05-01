@@ -183,5 +183,34 @@
         </style>
         <script src="appMovement.js"></script>
         <!-- <input type="password"> -->
+        <div id="login">
+            <p>Charles Wang</p>
+            <input type="password" id="pass" />
+        </div>
+        <style>
+            #login {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                background: url("https://cdn.wccftech.com/wp-content/uploads/2016/11/Abstract-Shapes.jpg");
+                padding: 100px;
+                display: block;
+            }
+        </style>
+        <script>
+            var password, screen;
+            password = document.getElementById("pass");
+            screen = document.getElementById("login");
+            document.addEventListener("keypress", function (event) {
+                // event.preventDefault();
+                if (event.keyCode == 13) {
+                    if (password === "hello") {
+                        screen.style.display = "none";
+                    }
+                }
+            });
+        </script>
     </body>
 </html>
