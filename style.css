@@ -167,7 +167,7 @@ h2 {
 #id {
     position: fixed;
 }
-body {
+#completeWrapper {
     background: url("https://cdn.wccftech.com/wp-content/uploads/2016/11/Abstract-Shapes.jpg");
     background-size: cover;
     user-select: none;
