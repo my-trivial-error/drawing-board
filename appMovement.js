@@ -79,48 +79,7 @@ dragElement(document.getElementById("tab"));
             pos2 = pos4;
         }
     }
-
-// Make the DIV element draggable:
-dragElemen(document.getElementById("textedit"));
-    function dragElemen(elmnt) {
-        var pos11 = 0, pos21 = 0, pos31 = 0, pos41 = 0;
-        if (document.getElementById("safeguard1")) {
-            // if present, the header is where you move the DIV from:
-            document.getElementById("safeguard1").onmousedown = dragMouseDow;
-        } else {
-            // otherwise, move the DIV from anywhere inside the DIV:
-            elmnt.onmousedown = dragMouseDow;
-        }
-        function dragMouseDow(e) {
-            e = e || window.event;
-            e.preventDefault();
-            // get the mouse cursor position at startup:
-            pos31 = e.clientX;
-            pos41 = e.clientY;
-            document.onmouseup = closeDragElemen;
-            // call a function whenever the cursor moves:
-            document.onmousemove = elementDra;
-        }
-        function elementDra(e) {
-            e = e || window.event;
-            e.preventDefault();
-            // calculate the new cursor position:
-            pos11 = pos31 - e.clientX;
-            pos21 = pos41 - e.clientY;
-            // set the element's new position:
-            elmnt.style.top = (elmnt.offsetTop + e.clientY)/2.6 + "px";
-            elmnt.style.left = (elmnt.offsetLeft + e.clientX)/2.6 + "px";
-        }
-        function closeDragElemen() {
-            // stop moving when mouse button is released:
-            document.onmouseup = null;
-            document.onmousemove = null;
-            // pos31 = pos11 + e.clientX;
-            // pos41 = pos21 + e.clientY;
-            pos11 = pos31;
-            pos21 = pos41;
-        }
-    }
+dragElement(document.getElementById("textedit"))
 var webpage1 = document.getElementById("webpageUp");
 var webpage2 = document.getElementById("webpageUp2");
 function changeTabs() {
@@ -143,3 +102,8 @@ asdfd.addEventListener("mousedown", function(e) {
     hideSys();
     nameApp.innerHTML = "System Preferences";
 });
+greenButton = document.getElementById("greenButtonChrome");
+function fullScreen() {
+    tab.style.width = "100%";
+    tab.style.width = "100%";
+}
