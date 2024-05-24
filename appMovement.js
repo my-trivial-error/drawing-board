@@ -40,6 +40,7 @@ chromeIcon.addEventListener("mousedown", function(e) {
 });
 // Make the DIV element draggable:
 dragElement(document.getElementById("tab"));
+// dragElement(document.getElementById("textedit"));
     function dragElement(elmnt) {
         var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
         if (document.getElementById("safeguard")) {
@@ -79,7 +80,7 @@ dragElement(document.getElementById("tab"));
             pos2 = pos4;
         }
     }
-dragElement(document.getElementById("textedit"))
+// dragElement(document.getElementById("textedit"));
 var webpage1 = document.getElementById("webpageUp");
 var webpage2 = document.getElementById("webpageUp2");
 function changeTabs() {
