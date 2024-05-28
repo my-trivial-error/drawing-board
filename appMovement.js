@@ -77,7 +77,8 @@ dragElement(document.getElementById("tab"), document.getElementById("safeguard")
             pos2 = pos4;
         }
     }
-// dragElement(document.getElementById("textedit"));
+dragElement(document.getElementById("textedit"), document.getElementById("safeguard1"));
+dragElement(document.getElementById("asdf"), document.getElemenntById("wutt"));
 var webpage1 = document.getElementById("webpageUp");
 var webpage2 = document.getElementById("webpageUp2");
 function changeTabs() {
