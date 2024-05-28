@@ -102,6 +102,9 @@ asdfd.addEventListener("mousedown", function(e) {
     nameApp.innerHTML = "System Preferences";
 });
 greenButton = document.getElementById("greenButtonChrome");
+greenButton.addEventListener("mousedown", function(e) {
+    fullScreen();
+});
 function fullScreen() {
     tab.style.width = "100%";
     tab.style.width = "100%";
