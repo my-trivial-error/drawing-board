@@ -39,16 +39,13 @@ chromeIcon.addEventListener("mousedown", function(e) {
     nameApp.innerHTML = "Chrome";
 });
 // Make the DIV element draggable:
-dragElement(document.getElementById("tab"));
+dragElement(document.getElementById("tab"), document.getElementById("safeguard"));
 // dragElement(document.getElementById("textedit"));
-    function dragElement(elmnt) {
+    function dragElement(elmnt, pull) {
         var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-        if (document.getElementById("safeguard")) {
+        if (pull) {
             // if present, the header is where you move the DIV from:
-            document.getElementById("safeguard").onmousedown = dragMouseDown;
-        } else {
-            // otherwise, move the DIV from anywhere inside the DIV:
-            elmnt.onmousedown = dragMouseDown;
+            pull.onmousedown = dragMouseDown;
         }
         function dragMouseDown(e) {
             e = e || window.event;
