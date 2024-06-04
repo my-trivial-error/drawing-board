@@ -44,7 +44,6 @@ chromeIcon.addEventListener("mousedown", function(e) {
     hideChrome();
     nameApp.innerHTML = "Chrome";
 });
-// Make the DIV element draggable:
 dragElement(document.getElementById("tab"), document.getElementById("safeguard"));
 // dragElement(document.getElementById("textedit"));
     function dragElement(elmnt, pull) {
@@ -102,7 +101,7 @@ function hideSys() {
     var asdf = document.getElementById("asdf");
     asdf.classList.toggle("changedHide");
 }
-eee.addEventListener("mousedown", function(e) {
+eee.addEventListener("click", function(e) {
     var w34hu2f = e.value;
     w34hu2f = 0;
     hideSys();
@@ -120,6 +119,6 @@ greenButton.addEventListener("mousedown", function(e) {
     fullScreen();
 });
 function fullScreen() {
-    tab.style.width = "100%";
-    tab.style.width = "100%";
+    tab.style.width = "1000px";
+    tab.style.width = "600px;";
 }
