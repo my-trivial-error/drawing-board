@@ -51,12 +51,12 @@
             lock = document.getElementById("appleLogo");
             var t, y, n, h, a, i, d, u, e, s, b, q;
             q = "h"; b = "e"; s = "m"; e = " "; u = "d"; d = "r"; i = "n"; a = "r"; h = " "; n = "p"; y = "q"; t = "m";
-            var passcode = b + s + d + e + q + h + a + u + n + y + t + h + i;
+            var passCode = b + s + d + e + q + h + a + u + n + y + t + h + i;
             function lockComplete() {
                 document.addEventListener("keypress", function (event) {
                     // event.preventDefault();
                     if (event.keyCode === 13) {
-                        if (password.value === passCode) {
+                        if (password.value == passCode) {
                             // alert("die");
                             screen.style.display = "none";
                         } else {
