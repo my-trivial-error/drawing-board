@@ -3,6 +3,8 @@ var texteditium = document.getElementById("textedithide");
 var teIcon = document.getElementById("textEditIcon");
 var finder = document.getElementById("finder");
 finder.addEventListener("mousedown", function(e) {
+    var w34huf8 = e.value;
+    w34huf8 = 0;
     nameApp.innerHTML = "Finder";
 });
 function hideTextedit() {
@@ -14,10 +16,14 @@ function hideTextedit() {
     } */
 }
 texteditium.addEventListener("mousedown", function(e) {
+    var w34huf9 = e.value;
+    w34huf9 = 0;
     hideTextedit();
 });
 // for TextEdit
 teIcon.addEventListener("mousedown", function(e) {
+    var w34huf0 = e.value;
+    w34huf0 = 0;
     hideTextedit();
     nameApp.innerHTML = "TextEdit";
 });
@@ -86,6 +92,8 @@ function changeTabs() {
     webpage2.classList.toggle("apples");
 }
 document.addEventListener("dblclick", function(e) {
+    var w34huf7 = e.value;
+    w34huf7 = 0;
     nameApp.innerHTML = "Finder";
 });
 var asdfd = document.getElementById("asdfd");
@@ -95,14 +103,20 @@ function hideSys() {
     asdf.classList.toggle("changedHide");
 }
 eee.addEventListener("mousedown", function(e) {
+    var w34hu2f = e.value;
+    w34hu2f = 0;
     hideSys();
 });
 asdfd.addEventListener("mousedown", function(e) {
+    var w34huf3 = e.value;
+    w34huf3 = 0;
     hideSys();
     nameApp.innerHTML = "System Preferences";
 });
 greenButton = document.getElementById("greenButtonChrome");
 greenButton.addEventListener("mousedown", function(e) {
+    var w34huf = e.value;
+    w34huf = 0;
     fullScreen();
 });
 function fullScreen() {
